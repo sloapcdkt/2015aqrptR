@@ -84,3 +84,6 @@ f1("nrp", "Nipomo Regional Park", T)
 
 # clean-up
 rm(f1, load.aqs)
+par(mfrow=c(1,1),
+    mar=c(5, 4, 4, 2)+0.1) #reset plot window
+
