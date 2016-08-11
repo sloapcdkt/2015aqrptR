@@ -446,6 +446,7 @@ quantile(error.rate, probs = c(0.025, 0.975)) # 7.8 to 11.0 % ## theres a random
 round(100-100*quantile(error.rate, probs = c(0.025, 0.975)), 1)
 abline(v=quantile(error.rate, probs = c(0.025, 0.975)) )
 
+rm(i, boot.sample, boot.pred, boot.trues, conf.mat, error.rate)
 
 ################
 ## Figure A6
@@ -504,4 +505,7 @@ points(ddd$pm10.ave, pch=16, cex=0.5, col=cols)
 abline(h=50, col="grey", lwd=0.5)
 abline(h=0, col=1, lwd=0.5)
 
-
+######################
+## clean up
+rm(d, dd, ddd, cols, cv.tree.all3, cv.tree.all4, exceeds, plotcols, preds, prune.all2, prune.all4,
+   tree.all, tree.all2, tree.all3, tree.all4, tree.pred, trues, vars, years, mean2)
