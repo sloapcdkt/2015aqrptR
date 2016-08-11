@@ -113,9 +113,6 @@ rm(load.aqs, id, id2)
 s1<-read.csv("S1_june2016.csv", comment.char="#", skip=6)
 names(s1)<-c("date", "wd", "ws")
 s1$date<-as.POSIXct(as.character(s1$date), tz="UTC", format="%Y-%m-%d %H:%M:%S")
-#s1$ws<-as.character(s1$ws)
-#s1$ws<-as.numeric(s1$ws)
-
 
 ##################
 ## merge hourly cdf and s1 data
